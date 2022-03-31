@@ -12,6 +12,6 @@ public class POOUnidad01BAMM {
     
     public static void main(String[]args){
         System.out.println("Hola Mundo");
-        
+          
     }
 }
