@@ -41,4 +41,26 @@ public class Auto {
          }
          return retorno;
         }
+        
+        public double calcularMatricula(){
+         var retorno = 1000000d;
+         if(this.precio < 10000 && this.year < 2010){
+             retorno = precio*0.10;
+                
+         }else{
+             if(this.year > 2010){
+                 retorno = precio*0.15;
+             }else{
+                 if(this.precio > 10000 && this.year < 2010){
+                     retorno = precio*0.20;
+                    }else{
+                     if(this.precio > 2010){
+                     retorno = precio*0.25;
+                     }
+                 }
+             }
+         } 
+         return retorno;
+         } 
+        
 }
