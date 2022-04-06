@@ -48,9 +48,16 @@ public class POOUnidad01BAMM {
         System.out.println("el auto de precio: "+autoMauricio.precio+" debe pagar de tasa solidaria: "+autoMauricio.calcularTasaSolidaria());
         System.out.println("el auto de precio: "+autoJuan.precio+" debe pagar de tasa solidaria: "+autoJuan.calcularTasaSolidaria());
 
-        System.out.println("el auto de precio: "+autoMauricio.precio+" el valor a pagar de la matricula es de: "+autoMauricio.calcularMatricula());
-        System.out.println("el auto de precio: "+autoMauricio.precio+" el valor a pagar de la matricula es de: "+autoJuan.calcularMatricula());
-        
+       var costoMatricula = 1000000d;
+       costoMatricula= autoJuan.calcularMatricula(2010,10000);
+       System.out.println("Debe pagar "+costoMatricula+ " USD por concepto de matricula");
+       
+       System.out.println("El auto es de la Provincia de: "+autoMauricio.obtenerProvincia());
+       System.out.println("El auto es de la Provincia de: "+autoJuan.obtenerProvincia());
+       
+
+       
+       
 
 
     }

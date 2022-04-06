@@ -42,23 +42,59 @@ public class Auto {
          return retorno;
         }
         
-        public double calcularMatricula(){
+        public double calcularMatricula(int limitYear, int limitPrecio){
             
          var retorno = 1000000d;
-         if(this.year >= 0 && this.year < 2010){
-             if(this.precio >= 0 && this.precio <=10000)
-                retorno = this.precio * 0.1;
+         if(this.year >= 0 && this.year <= limitYear){
+             if(this.precio >= 0 && this.precio <=limitPrecio)
+                retorno = this.precio*0.1;
              else 
                 retorno= this.precio*0.2;
          }else{
-             if(this.precio >= 0 && this.precio <= 10000)
+             if(this.precio >= 0 && this.precio <= limitPrecio)
                 retorno = this.precio * 0.15;
              else
                 retorno = this.precio * 0.25; 
-              
-         
      } 
          return retorno;
    }
-   
+        public String obtenerProvincia(){
+            var retorno = "IBD";
+            var primerCaracterPlaca = this.placa.charAt(0);
+            switch(primerCaracterPlaca)
+            {
+                case 'A':
+                    retorno = "Azuay";
+                    break;
+                case 'B':
+                    retorno = "Bolivar";
+                    break;
+                case 'C':
+                    retorno = "Carchi";
+                    break;   
+                case 'U':
+                    retorno = "Cañar";
+                    break;
+                case 'G':
+                    retorno = "Guayas";
+                    break;
+                case 'P':
+                    retorno = "Pichincha";
+                    break;
+                default:
+                    retorno = "Provincia no disponible";
+            }
+           return retorno; 
+        }
+        public int calcularYears(int currentYear){
+            var retorno = 100000;
+         if(this.year >= 0 && this.year <= currentYear){
+                retorno = year - currentYear;
+                
+         }else{
+               retorno = 0; 
+  
+            }
+            return retorno;
+        }
 }
