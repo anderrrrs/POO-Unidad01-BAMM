@@ -55,6 +55,16 @@ public class POOUnidad01BAMM {
        System.out.println("El auto es de la Provincia de: "+autoMauricio.obtenerProvincia());
        System.out.println("El auto es de la Provincia de: "+autoJuan.obtenerProvincia());
        
+       System.out.println("El año actual del vehiculo es de: "+autoMauricio.calcularYears(2022));
+       System.out.println("El año actual del vehiculo es de: "+autoJuan.calcularYears(2022));
+       
+       System.out.println( "El vehiculo se puede asegurar: "+autoMauricio.sePuedeAsegurar(2022, 8) );
+       System.out.println( "El vehiculo se puede asegurar: "+autoMauricio.sePuedeAsegurar(2022, 8) );
+       
+       System.out.println( "La placa es de la provincia de: "+autoMauricio.esProvinciaDe("AZUAY"));
+
+
+
 
        
        

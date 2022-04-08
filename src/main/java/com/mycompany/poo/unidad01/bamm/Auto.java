@@ -23,6 +23,7 @@ public class Auto {
          }
          return retorno;
         }
+        
         public int calcularTasaSolidaria(){
          var retorno = 1000000;
          if(this.precio > 0 && this.precio<1000){
@@ -42,22 +43,22 @@ public class Auto {
          return retorno;
         }
         
-        public double calcularMatricula(int limitYear, int limitPrecio){
-            
-         var retorno = 1000000d;
-         if(this.year >= 0 && this.year <= limitYear){
-             if(this.precio >= 0 && this.precio <=limitPrecio)
-                retorno = this.precio*0.1;
-             else 
-                retorno= this.precio*0.2;
-         }else{
-             if(this.precio >= 0 && this.precio <= limitPrecio)
-                retorno = this.precio * 0.15;
-             else
-                retorno = this.precio * 0.25; 
-     } 
-         return retorno;
-   }
+    public double calcularMatricula(int limitYear, int limitPrecio){
+        var retorno=10000d;
+        if(this.year>=0 && this.year<=limitYear){
+            if(this.precio>=0 && this.precio<=limitPrecio)
+                retorno=this.precio*0.1;
+            else
+                retorno=this.precio*0.2;
+        }else{
+             if(this.precio>=0 && this.precio<=limitPrecio)
+                retorno=this.precio*0.15;
+            else
+                retorno=this.precio*0.25;           
+        }
+        return retorno;
+    }
+        
         public String obtenerProvincia(){
             var retorno = "IBD";
             var primerCaracterPlaca = this.placa.charAt(0);
@@ -86,15 +87,37 @@ public class Auto {
             }
            return retorno; 
         }
+        
         public int calcularYears(int currentYear){
+            
             var retorno = 100000;
-         if(this.year >= 0 && this.year <= currentYear){
-                retorno = year - currentYear;
+                retorno = currentYear - year;
                 
-         }else{
-               retorno = 0; 
-  
-            }
+     
             return retorno;
         }
+        
+        public boolean sePuedeAsegurar(int currentYear, int edadMaxima){
+            var retorno = false;
+            if(this.calcularYears(currentYear)<= edadMaxima)
+                retorno = true;
+            return retorno;
+        }
+        
+     public boolean esProvinciaDe(String provincia){
+        var retorno=false;
+        var primeraLetraPlaca=this.placa.substring(0, 1);
+        
+        if(provincia=="Azuay" && primeraLetraPlaca=="A")
+            retorno=true;
+        if(provincia=="Guayas" && primeraLetraPlaca=="G")
+            retorno=true;
+        if(provincia=="Cañar" && primeraLetraPlaca=="U")
+            retorno=true;
+        if(provincia=="Pichincha" && primeraLetraPlaca=="P")
+            retorno=true;
+        
+        return retorno;
+    }
+              
 }
