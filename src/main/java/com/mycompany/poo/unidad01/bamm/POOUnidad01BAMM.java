@@ -62,6 +62,26 @@ public class POOUnidad01BAMM {
        System.out.println( "El vehiculo se puede asegurar: "+autoMauricio.sePuedeAsegurar(2022, 8) );
        
        System.out.println( "La placa es de la provincia de: "+autoMauricio.esProvinciaDe("AZUAY"));
+       
+       var arreglo = new int[4];
+        arreglo[0]=10;
+        arreglo[1]=20;
+        arreglo[2]=30;
+        arreglo[3]=40;
+        
+             while(c[i]<arreglo.length){
+            System.out.println(arreglo[i]);
+            i++;
+        }
+        for(i=0; i<arreglo.length; i++){
+            System.out.println(arreglo[i]*10);
+        }
+        for(var x:arreglo){
+            System.out.println(x*100);
+        }
+        
+        
+        
 
 
 

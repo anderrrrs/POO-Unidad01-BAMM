@@ -4,6 +4,8 @@
  */
 package com.mycompany.poo.unidad01.bamm;
 
+import java.util.Scanner;
+
 /**
  *
  * @author USER
@@ -117,6 +119,19 @@ public class Auto {
         if(provincia=="Pichincha" && primeraLetraPlaca=="P")
             retorno=true;
         
+        return retorno;
+    }
+     
+         public boolean esNumeros(String cadena){
+            var retorno = true;
+            var i = 0;
+            var c = new char[4];
+            
+           while(i<4){
+                c[i] = cadena.charAt(i);
+                if(Character.isDigit(c[i]));
+                i++; //i = i + 1
+            }
         return retorno;
     }
               
