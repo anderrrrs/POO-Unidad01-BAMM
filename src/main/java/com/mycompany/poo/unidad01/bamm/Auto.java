@@ -17,6 +17,7 @@ public class Auto {
         int year;
         double precio;
         String marca;
+        Propietario unPropietario;
         
         public boolean esTaxi(){
          var retorno = false;
