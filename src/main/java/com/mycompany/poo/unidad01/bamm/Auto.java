@@ -95,8 +95,6 @@ public class Auto {
             
             var retorno = 100000;
                 retorno = currentYear - year;
-                
-     
             return retorno;
         }
         
@@ -104,6 +102,7 @@ public class Auto {
             var retorno = false;
             if(this.calcularYears(currentYear)<= edadMaxima)
                 retorno = true;
+                System.out.println("si puede asegurar");
             return retorno;
         }
         
